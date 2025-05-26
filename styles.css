@@ -599,44 +599,44 @@ main {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
-  z-index: 9999;
+  background-color: #007BFF;
+  padding: 0;
+  margin: 0;
   display: none;
-  width: max-content;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.dropdown:hover .submenu,
-.dropdown:focus-within .submenu {
-  display: block;
-}
-
-.submenu li {
+  z-index: 9999;
   list-style: none;
-}
-
-.submenu a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: black;
-}
-
-.submenu a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Estilo para que el submenú esté por encima de otros elementos */
-.submenu {
-  position: absolute;
-  background-color: white;
-  display: none;
-  z-index: 9999;
+  min-width: 180px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .submenu {
   display: block;
+}
+
+.submenu li a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #0056b3;
+}
+
+section.medicamentos {
+    text-align: center;
+}
+
+#buscador {
+    margin: 10px auto 30px;
+    padding: 8px 12px;
+    width: 90%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -704,5 +704,26 @@ main {
   font-size: 18px;
   margin-top: 10px;
 }
+
+.footer {
+  background-color: #808080; /* gris */
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #0000ee; /* azul clásico de enlaces */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
 
 }
