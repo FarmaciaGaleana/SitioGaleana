@@ -27,8 +27,6 @@
                         <li><a href="categoria-vaginal.html">Vaginal</a></li>
                         <li><a href="categoria-estomacal.html">Estomacal</a></li>
                         <li><a href="categoria-general.html">General</a></li>
-                        <li><a href="categoria-curacion.html">Curación</a></li>
-                        <li><a href="categoria-suelto.html">Suelto</a></li>
                     </ul>
                 </li>
                 <li><a href="sintomas-enfermedades.html">TIPOS DE SÍNTOMAS O ENFERMEDADES</a></li>
@@ -37,6 +35,75 @@
         </nav>
     </header>
 
+    <section class="medicamentos">
+        <h2>PRESIÓN</h2>
+        <input type="text" id="buscador" placeholder="Buscar medicamento..." onkeyup="filtrarMedicamentos()">
+        
+    <div class="medicamento">
+  <img src="img/Captopril Tab 25 mg.jpg" alt="Captopril Tab 25 mg">
+  <h3>Captopril Tab 25 mg</h3>
+  <p>Antihipertensivo que ayuda a controlar la presión arterial alta y a prevenir complicaciones cardiovasculares.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Enalapril Tab 10 mg.webp" alt="Enalapril Tab 10 mg">
+  <h3>Enalapril Tab 10 mg</h3>
+  <p>Medicamento para tratar la hipertensión y la insuficiencia cardíaca. Pertenece a los inhibidores de la ECA.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Losartan 50 mg C30 tab.webp" alt="Losartan 50 mg C/30 tab">
+  <h3>Losartan 50 mg C/30 tab</h3>
+  <p>Antihipertensivo utilizado para tratar la presión arterial alta y proteger los riñones en pacientes diabéticos.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Losartan 100 mg C15 tab.webp" alt="Losartan 100 mg C/15 tab">
+  <h3>Losartan 100 mg C/15 tab</h3>
+  <p>Versión de dosis alta de Losartán para el control más intenso de la presión arterial. Caja con 15 tabletas.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Losartan 100 mg C30 tab.webp" alt="Losartan 100 mg C/30 tab">
+  <h3>Losartan 100 mg C/30 tab</h3>
+  <p>Tratamiento de la hipertensión arterial y protección renal prolongada. Presentación con 30 tabletas.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Losartan  Hidroclorotiazida C30.png" alt="Losartan / Hidroclorotiazida C/30">
+  <h3>Losartan / Hidroclorotiazida C/30</h3>
+  <p>Combinación de antihipertensivo y diurético que mejora el control de la presión arterial. Caja con 30 tabletas.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Metformina 500 mg.png" alt="Metformina 500 mg">
+  <h3>Metformina 500 mg</h3>
+  <p>Antidiabético oral de primera línea para controlar los niveles de glucosa en sangre en pacientes con diabetes tipo 2.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Metformina 850 mg.webp" alt="Metformina 850 mg">
+  <h3>Metformina 850 mg</h3>
+  <p>Tabletas de alta concentración para el tratamiento de la diabetes tipo 2. Mejora la sensibilidad a la insulina.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Metformina  Glibenclamida 5002.5 mg.webp" alt="Metformina / Glibenclaamida 500/2.5 mg">
+  <h3>Metformina / Glibenclaamida 500/2.5 mg</h3>
+  <p>Combinación de dos antidiabéticos para un control más efectivo de la glucosa en sangre en pacientes tipo 2.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Metformina  Glibenclamida 5005mg C30 TAB.png" alt="Metformina / Glibenclamida 500/5 mg C/30 TAB">
+  <h3>Metformina / Glibenclamida 500/5 mg C/30 TAB</h3>
+  <p>Tratamiento oral combinado para diabetes tipo 2. Presentación con 30 tabletas para control diario.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Metformina  Glibendamida 5005 mg C60 TAB.webp" alt="Metformina / Glibenclaamida 500/5 mg C/60 TAB">
+  <h3>Metformina / Glibenclaamida 500/5 mg C/60 TAB</h3>
+  <p>Doble acción antidiabética en formato extendido. Caja con 60 tabletas para control prolongado.</p>
+</div>
 
 <footer>
         <div class="footer-container">
@@ -70,17 +137,11 @@ function filtrarMedicamentos() {
 </script>
 
 <script>
-  let posicion = 0;
-
-  function moverCarrusel(direccion) {
-    const carrusel = document.getElementById('carrusel');
-    const tarjeta = carrusel.querySelector('.medicamento');
-    const tarjetaAncho = tarjeta.offsetWidth + 20; // 20 = margen
-    posicion += direccion * tarjetaAncho;
-    carrusel.style.transform = `translateX(${-posicion}px)`;
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
   }
 </script>
-
 
 </body>
 </html>

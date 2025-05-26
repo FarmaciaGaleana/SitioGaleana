@@ -27,8 +27,6 @@
                         <li><a href="categoria-vaginal.html">Vaginal</a></li>
                         <li><a href="categoria-estomacal.html">Estomacal</a></li>
                         <li><a href="categoria-general.html">General</a></li>
-                        <li><a href="categoria-curacion.html">Curación</a></li>
-                        <li><a href="categoria-suelto.html">Suelto</a></li>
                     </ul>
                 </li>
                 <li><a href="sintomas-enfermedades.html">TIPOS DE SÍNTOMAS O ENFERMEDADES</a></li>
@@ -36,6 +34,64 @@
             </ul>
         </nav>
     </header>
+
+   <section class="medicamentos">
+        <h2>VAGINAL</h2>
+        <input type="text" id="buscador" placeholder="Buscar medicamento..." onkeyup="filtrarMedicamentos()"> 
+
+        <div class="medicamento">
+  <img src="img/Acetonido de flujometronistatina C10 óvulos.png" alt="Acetonido de flujo/metro/nistatina C/10 óvulos">
+  <h3>Acetonido de flujo/metro/nistatina C/10 óvulos</h3>
+  <p>Combinación antifúngica y antibacteriana utilizada para tratar infecciones vaginales mixtas causadas por bacterias y hongos. Alivia síntomas como flujo, ardor y picazón.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Clindamicina  Ketoconazol C7 óvulos (Femitab).webp" alt="Clindamicina / Ketoconazol C7 óvulos (Femitab)">
+  <h3>Clindamicina / Ketoconazol C7 óvulos (Femitab)</h3>
+  <p>Tratamiento de infecciones vaginales mixtas, especialmente vaginitis bacteriana y candidiasis. La clindamicina actúa contra bacterias anaerobias y el ketoconazol contra hongos.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Clindamicina  Ketoconazol Crema (Mavifem).webp" alt="Clindamicina / Ketoconazol Crema (Mavifem)">
+  <h3>Clindamicina / Ketoconazol Crema (Mavifem)</h3>
+  <p>Crema de uso tópico para tratar infecciones vaginales o dérmicas de origen fúngico y bacteriano. Alivia inflamación, comezón y flujo anormal.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Clotrimazol Óvulos.png" alt="Clotrimazol Óvulos">
+  <h3>Clotrimazol Óvulos</h3>
+  <p>Antifúngico utilizado en el tratamiento de candidiasis vaginal. Elimina el hongo responsable de la infección y alivia síntomas como ardor y flujo.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Clotrimazol V-Crema.avif" alt="Clotrimazol V-Crema">
+  <h3>Clotrimazol V-Crema</h3>
+  <p>Crema vaginal antifúngica para tratar candidiasis vulvovaginal. Ayuda a eliminar el hongo y reducir la picazón y ardor.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Clotrimazol Óvulos.webp" alt="Clotrimazol Dual">
+  <h3>Clotrimazol Dual</h3>
+  <p>Tratamiento combinado (óvulo y crema) contra candidiasis vaginal. Combate el hongo desde el interior y alivia los síntomas externos como irritación.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Barmicil Crema.jpg" alt="Barmicil Crema">
+  <h3>Barmicil Crema</h3>
+  <p>Crema dermatológica con propiedades antifúngicas, antibacterianas y antiinflamatorias. Se usa en infecciones cutáneas por hongos o bacterias.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Gelmicin Crema.webp" alt="Gelmicin Crema">
+  <h3>Gelmicin Crema</h3>
+  <p>Crema para infecciones de la piel que combina betametasona, clotrimazol y gentamicina. Reduce inflamación, picazón e infección por bacterias u hongos.</p>
+</div>
+
+<div class="medicamento">
+  <img src="img/Dexpantenol Crema.webp" alt="Dexpantenol Crema">
+  <h3>Dexpantenol Crema</h3>
+  <p>Crema regeneradora y humectante para piel irritada, seca o lesionada. Promueve la cicatrización y alivia quemaduras leves, raspaduras y dermatitis.</p>
+</div>
 
 
 <footer>
@@ -70,17 +126,11 @@ function filtrarMedicamentos() {
 </script>
 
 <script>
-  let posicion = 0;
-
-  function moverCarrusel(direccion) {
-    const carrusel = document.getElementById('carrusel');
-    const tarjeta = carrusel.querySelector('.medicamento');
-    const tarjetaAncho = tarjeta.offsetWidth + 20; // 20 = margen
-    posicion += direccion * tarjetaAncho;
-    carrusel.style.transform = `translateX(${-posicion}px)`;
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
   }
 </script>
-
 
 </body>
 </html>

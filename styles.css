@@ -591,29 +591,54 @@ main {
 }
 
 /* Mostrar submenú al pasar el cursor */
-.dropdown:hover .submenu {
-    display: block;
+.dropdown {
+  position: relative;
 }
 
-footer {
-    font-size: 14px;
-    background-color: #686a6cc0;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  z-index: 9999;
+  display: none;
+  width: max-content;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-#buscador {
-  width: 50%;
-  padding: 10px;
-  font-size: 16px;
-  margin: 20px auto;
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
   display: block;
-  border: 1px solid #ccc;
-  border-radius: 8px;
 }
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilo para que el submenú esté por encima de otros elementos */
+.submenu {
+  position: absolute;
+  background-color: white;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
 
 /* Estilo para el botón hamburguesa */
 .menu-toggle {
@@ -661,19 +686,6 @@ footer {
     text-align: center;
     padding: 10px 0;
   }
-  .carrusel-container {
-  position: relative;
-  max-width: 400px;
-  margin: auto;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 10px;
-}
-
-.carrusel {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-}
 
 .medicamento {
   min-width: 100%;
@@ -691,29 +703,6 @@ footer {
 .medicamento h3 {
   font-size: 18px;
   margin-top: 10px;
-}
-
-/* FLECHAS CENTRADAS */
-.flecha {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #003cb3;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.flecha.izquierda {
-  left: 10px;
-}
-
-.flecha.derecha {
-  right: 10px;
 }
 
 }

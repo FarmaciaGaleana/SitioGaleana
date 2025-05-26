@@ -27,8 +27,6 @@
                         <li><a href="categoria-vaginal.html">Vaginal</a></li>
                         <li><a href="categoria-estomacal.html">Estomacal</a></li>
                         <li><a href="categoria-general.html">General</a></li>
-                        <li><a href="categoria-curacion.html">Curación</a></li>
-                        <li><a href="categoria-suelto.html">Suelto</a></li>
                     </ul>
                 </li>
                 <li><a href="sintomas-enfermedades.html">TIPOS DE SÍNTOMAS O ENFERMEDADES</a></li>
@@ -38,13 +36,9 @@
     </header>
 
     <section class="medicamentos">
-        <h2>Antibioticos</h2>
+        <h2>ANTIBIOTICOS</h2>
         <input type="text" id="buscador" placeholder="Buscar medicamento..." onkeyup="filtrarMedicamentos()">
-        <div class="carrusel-container">
-  <div class="carrusel-container">
-  <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
 
-  <div class="carrusel" id="carrusel">
 <div class="medicamento">
     <img src="img/Amikacina 100 mg.webp" alt="Amikacina C/1 Amp 100mg">
     <h3>Amikacina C/1 Amp 100mg</h3>
@@ -956,8 +950,6 @@
     <h3>Tetraciclina Cap 250 mg</h3>
     <p>Antibiótico de amplio espectro eficaz contra una variedad de bacterias. Es útil en el tratamiento de acné, brucelosis, infecciones del tracto respiratorio, urinario y enfermedades de transmisión sexual.</p>
 </div>
-<button class="flecha derecha" onclick="moverCarrusel(1)">&#10095;</button>
-</div>
 
 <footer>
         <div class="footer-container">
@@ -991,27 +983,11 @@ function filtrarMedicamentos() {
 </script>
 
 <script>
-  let posicion = 0;
-
-  function moverCarrusel(direccion) {
-    const carrusel = document.getElementById('carrusel');
-    const item = carrusel.querySelector('.medicamento');
-    const ancho = item.offsetWidth;
-    const maxPosicion = (carrusel.children.length - 1) * ancho;
-
-    posicion += direccion * ancho;
-
-    if (posicion < 0) {
-      posicion = 0;
-    } else if (posicion > maxPosicion) {
-      posicion = maxPosicion;
-    }
-
-    carrusel.style.transform = `translateX(-${posicion}px)`;
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
   }
 </script>
-
-
 
 
 </body>

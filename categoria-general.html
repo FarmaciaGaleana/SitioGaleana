@@ -18,7 +18,7 @@
                 <li class="dropdown">
                     <a href="medicamentos.html">MEDICAMENTOS</a>
                     <ul class="submenu">
-                        <li><a href="categoria-otc.html">OTC</a></li>
+                         <li><a href="categoria-otc.html">OTC</a></li>
                         <li><a href="categoria-antibiotico.html">Antibióticos</a></li>
                         <li><a href="categoria-antigripal.html">Antigripal</a></li>
                         <li><a href="categoria-dolor.html">Dolor</a></li>
@@ -27,8 +27,6 @@
                         <li><a href="categoria-vaginal.html">Vaginal</a></li>
                         <li><a href="categoria-estomacal.html">Estomacal</a></li>
                         <li><a href="categoria-general.html">General</a></li>
-                        <li><a href="categoria-curacion.html">Curación</a></li>
-                        <li><a href="categoria-suelto.html">Suelto</a></li>
                     </ul>
                 </li>
                 <li><a href="sintomas-enfermedades.html">TIPOS DE SÍNTOMAS O ENFERMEDADES</a></li>
@@ -40,10 +38,7 @@
     <section class="medicamentos">
         <h2>GENERAL</h2>
         <input type="text" id="buscador" placeholder="Buscar medicamento..." onkeyup="filtrarMedicamentos()">
-        <div class="carrusel-container">
-  <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
-
-  <div class="carrusel" id="carrusel">
+        
 <div class="medicamento">
     <img src="img/Acarbosa.jpg" alt="Acarbosa">
     <h3>Acarbosa</h3>
@@ -1465,8 +1460,6 @@
   <h3>Tramadol 50mg C/60 Tab</h3>
   <p>Presentación prolongada para tratamiento de dolor crónico moderado. Uso bajo estricta supervisión médica por riesgo de dependencia.</p>
 </div>
-<button class="flecha derecha" onclick="moverCarrusel(1)">&#10095;</button>
-</div>
 
 
 
@@ -1502,27 +1495,11 @@ function filtrarMedicamentos() {
 </script>
 
 <script>
-  let posicion = 0;
-
-  function moverCarrusel(direccion) {
-    const carrusel = document.getElementById('carrusel');
-    const item = carrusel.querySelector('.medicamento');
-    const ancho = item.offsetWidth;
-    const maxPosicion = (carrusel.children.length - 1) * ancho;
-
-    posicion += direccion * ancho;
-
-    if (posicion < 0) {
-      posicion = 0;
-    } else if (posicion > maxPosicion) {
-      posicion = maxPosicion;
-    }
-
-    carrusel.style.transform = `translateX(-${posicion}px)`;
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
   }
 </script>
-
-
 
 
 </body>
