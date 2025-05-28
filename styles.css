@@ -591,36 +591,33 @@ main {
 }
 
 /* Mostrar submenú al pasar el cursor */
-.dropdown {
-  position: relative;
-}
-
 .submenu {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   top: 100%;
-  left: 0;
-  background-color: #007BFF;
-  padding: 0;
-  margin: 0;
-  display: none;
-  z-index: 9999;
-  list-style: none;
-  min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #007bff;
+  min-width: 200px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  border-radius: 8px;
 }
 
-.dropdown:hover .submenu {
+.submenu a {
   display: block;
-}
-
-.submenu li a {
-  display: block;
+  padding: 10px 15px;
   color: white;
-  padding: 10px;
   text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.submenu li a:hover {
+.submenu a:last-child {
+  border-bottom: none;
+}
+
+.submenu a:hover {
   background-color: #0056b3;
 }
 
